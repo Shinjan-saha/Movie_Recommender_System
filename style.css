@@ -1,0 +1,62 @@
+/* Apply background color and gradient to main container */
+[data-testid="stAppViewContainer"] {
+    background: linear-gradient(to right, #000000, #1c1c1c);
+    color: #ffffff;
+    font-family: 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header Style */
+h1 {
+    color: #e50914;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    padding-top: 20px;
+}
+
+/* Dropdown Label and Input */
+.stSelectbox > label {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+.stSelectbox div[data-baseweb="select"] {
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Recommend Button Style */
+.stButton>button {
+    background-color: #e50914;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    height: 3em;
+    width: 100%;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.stButton>button:hover {
+    background-color: #f40612;
+    color: black;
+    cursor: pointer;
+}
+
+/* Recommended Movie Titles */
+.stImage + div {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Columns for posters */
+div[data-testid="column"] {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 10px;
+    border-radius: 10px;
+}
