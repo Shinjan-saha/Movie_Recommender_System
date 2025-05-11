@@ -3,6 +3,8 @@ import streamlit as st          # For creating the web app interface
 import pickle                   # For loading pre-saved Python objects (like models or data)
 import pandas as pd             # For data manipulation and analysis
 import requests                 # For making HTTP requests to web APIs
+import zipfile                  # For unzipping model files
+import os                       # For checking file existence
 
 # Function to load custom CSS for styling the Streamlit app
 def add_custom_css():
@@ -21,9 +23,15 @@ def fetch_poster(movie_id):
     # Return the full URL to the movie's poster image
     return "https://image.tmdb.org/t/p/w500" + data['poster_path']
 
-# Load the movie data and similarity matrix from pickled files
+# Load the movie data from pickled file
 movies_dict = pickle.load(open('movie_dict.pkl', 'rb'))  # Load movie dictionary
-movies = pd.DataFrame(movies_dict)                       # Convert to DataFrame for easier handling
+movies = pd.DataFrame(movies_dict)                       # Convert to DataFrame
+
+# Unzip and load similarity.pkl at runtime
+if not os.path.exists("similarity.pkl"):
+    with zipfile.ZipFile("similarityPKL.zip", "r") as zip_ref:
+        zip_ref.extract("similarity.pkl")  # Only extract similarity.pkl
+
 similarity = pickle.load(open('similarity.pkl', 'rb'))   # Load similarity matrix
 
 # Function to recommend similar movies based on the selected movie
