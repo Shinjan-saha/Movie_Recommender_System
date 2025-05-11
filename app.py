@@ -85,3 +85,21 @@ if st.button("Recommend"):
     with col5:
         st.text(names[4])
         st.image(posters[4])
+
+
+
+
+
+import streamlit as st
+
+# Your main content
+# st.markdown("<h1 style='text-align: center; font-weight: bold;'>Movie Recommender System</h1>", unsafe_allow_html=True)
+
+# Your recommendation logic and UI components here...
+
+# Footer
+st.markdown("""<hr style="margin-top: 50px;"/>
+<div style='text-align: center; font-size: 0.9em; color: gray;'>
+    Copyright ©2025 <b>Sourav Louha</b>. All Rights Reserved.
+</div>
+""", unsafe_allow_html=True)
