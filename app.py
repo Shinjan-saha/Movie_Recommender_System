@@ -99,7 +99,7 @@ import streamlit as st
 
 # Footer
 st.markdown("""<hr style="margin-top: 50px;"/>
-<div style='text-align: center; font-size: 0.9em; color: gray;'>
+<div style='text-align: center; font-size: 0.9em; color: white;'>
     Copyright ©2025 <b>Sourav Louha</b>. All Rights Reserved.
 </div>
 """, unsafe_allow_html=True)
