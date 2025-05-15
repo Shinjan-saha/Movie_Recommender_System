@@ -6,3 +6,7 @@ this is the original similarity.pkl file , original file size is 175MB , For tha
 
 ### all colab pdf - 
 [Movie_Recommendation_System.ipynb - Colab.pdf](https://github.com/user-attachments/files/20184723/Movie_Recommendation_System.ipynb.-.Colab.pdf)
+
+
+
+oouou
